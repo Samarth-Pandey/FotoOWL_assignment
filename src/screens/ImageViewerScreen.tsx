@@ -41,7 +41,7 @@ export default function ImageViewerScreen({ navigation, route }: Props) {
   const [showControls, setShowControls] = useState(true);
   const [isDownloading, setIsDownloading] = useState(false);
   const flatListRef = useRef<FlatList>(null);
-  const controlsTimeout = useRef<NodeJS.Timeout>();
+  const controlsTimeout = useRef<NodeJS.Timeout | null>(null);
 
   const currentImage = images[currentIndex];
   const isFavorite = currentImage ? favorites.includes(currentImage.id) : false;
