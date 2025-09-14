@@ -1,30 +1,64 @@
 {
   "expo": {
-    "name": "FotoOwlGallery",
-    "slug": "FotoOwlGallery",
+    "name": "FotoOwl Gallery",
+    "slug": "fotoowl-gallery",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fotoowlgallery",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "This app needs access to your photo library to save images.",
+        "NSPhotoLibraryAddUsageDescription": "This app needs access to save images to your photo library."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
+      "package": "com.fotoowlgallery",
+      "permissions": [
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_EXTERNAL_STORAGE",
+        "ACCESS_MEDIA_LOCATION"
+      ],
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "scheme": "fotoowl",
+    "extra": {
+      "EXPO_PUBLIC_FOTOOWL_API_KEY": "4030",
+      "EXPO_PUBLIC_EVENT_ID": "154770"
+    },
+    "plugins": [
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow FotoOwl Gallery to access your photos to save images to your gallery.",
+          "savePhotosPermission": "Allow FotoOwl Gallery to save photos to your gallery."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app needs access to your photo library to display and share images."
+        }
+      ]
+    ]
   }
 }
