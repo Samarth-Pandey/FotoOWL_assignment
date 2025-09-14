@@ -163,8 +163,8 @@ Test coverage includes:
 
 Create `.env` file with:
 ```env
-EXPO_PUBLIC_FOTOOWL_API_KEY=4030
-EXPO_PUBLIC_EVENT_ID=154770
+EXPO_PUBLIC_FOTOOWL_API_KEY=****
+EXPO_PUBLIC_EVENT_ID=******
 ```
 
 ## Build for Production
