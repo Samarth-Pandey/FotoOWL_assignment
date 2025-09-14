@@ -190,3 +190,12 @@ The app is configured for store deployment with proper icons, splash screens, an
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+
+for run,
+npx expo start --clear
+
+for build,
+npx expo login
+eas build --platform android --profile production
+

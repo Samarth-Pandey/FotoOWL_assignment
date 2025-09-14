@@ -30,11 +30,14 @@
       },
       "package": "com.fotoowlgallery",
       "permissions": [
-        "WRITE_EXTERNAL_STORAGE",
-        "READ_EXTERNAL_STORAGE", 
-        "READ_MEDIA_IMAGES",
-        "READ_MEDIA_VIDEO",
-        "ACCESS_MEDIA_LOCATION"
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_MEDIA_VIDEO",
+        "android.permission.ACCESS_MEDIA_LOCATION",
+        "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+        "android.permission.READ_MEDIA_AUDIO",
+        "android.permission.RECORD_AUDIO"
       ],
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
@@ -45,7 +48,10 @@
     "scheme": "fotoowl",
     "extra": {
       "EXPO_PUBLIC_FOTOOWL_API_KEY": "4030",
-      "EXPO_PUBLIC_EVENT_ID": "154770"
+      "EXPO_PUBLIC_EVENT_ID": "154770",
+      "eas": {
+        "projectId": "e9f543f2-7ffc-43db-8206-1576356dd7b7"
+      }
     },
     "plugins": [
       [
@@ -60,7 +66,9 @@
         {
           "photosPermission": "The app needs access to your photo library to display and share images."
         }
-      ]
-      ]
+      ],
+      "expo-build-properties"
+    ],
+    "owner": "samarth_p"
   }
 }
